@@ -37,11 +37,11 @@ public class tes {
             System.out.println("Segitiga Tumpul");
         } else if(sisiA * sisiA < (sisiB * sisiB + sisiC * sisiC)){
             System.out.println("Segitiga Lancip");
-        } else if(sisiA == sisiB && sisiA == sisiC && sisiB == sisiC){
+        }
+        if(sisiA == sisiB && sisiA == sisiC && sisiB == sisiC){
             System.out.println("Segitiga Sama Sisi");
         } else if(sisiA == sisiB && sisiA != sisiC && sisiB != sisiC){
             System.out.println("Segitiga Sama Kaki");
-
         }
 
         System.out.println(x + y + z);
