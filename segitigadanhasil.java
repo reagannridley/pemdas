@@ -46,9 +46,10 @@ public class tes {
 
         System.out.println(x + y + z);
         int kelilingSegitiga = sisiA + sisiB + sisiC;
-        int luasSegitiga = (sisiB * sisiC) / 2;
+        double luasSegitiga = ((double) sisiB * sisiC) / 2;
         System.out.println("Keliling : " + kelilingSegitiga);
-        System.out.println("Luas : " + luasSegitiga);
+        System.out.print("Luas : ");
+        System.out.printf("%.2f",luasSegitiga);
 
 
     }
