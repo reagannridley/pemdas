@@ -1,10 +1,9 @@
-package pemdasPTI.latsolUAP;
-
 import java.util.Scanner;
 
 public class segitigadanhasil {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
+        System.out.println(true);
         String kode1 = a.nextLine();
         String kode2 = a.nextLine();
         String kode3 = a.nextLine();
@@ -45,6 +44,7 @@ public class segitigadanhasil {
                 sisiA = angka1;
                 sisiB = angka2;
                 sisiC = angka3;
+            }
         }
         
 
@@ -68,14 +68,7 @@ public class segitigadanhasil {
         int luasSegitiga = (sisiB * sisiC) / 2;
         System.out.println("Keliling : " + kelilingSegitiga);
         System.out.println("Luas : " + luasSegitiga);
-    }
+        
     
+    }
 }
-}
-
-
-
-
-
-
-
