@@ -1,3 +1,5 @@
+package pemdasPTI.latsolUAP;
+
 import java.util.Scanner;
 
 public class segitigadanhasil {
@@ -25,27 +27,40 @@ public class segitigadanhasil {
         int sisiA = 0;
         int sisiB = 0;
         int sisiC = 0;
-        
-        if(angka3 > angka1 && angka3 > angka2){
-            if(angka1 > angka2){
-            sisiA = angka3;
-            sisiB = angka1;
-            sisiC = angka2;
+
+        if (angka1 > angka2 && angka1 > angka3) {
+            if (angka2 > angka3) {
+                sisiA = angka1; //miring
+                sisiB = angka2; //alas
+                sisiC = angka3; //t
+               
+            } else {
+                sisiA = angka1; //miring
+                sisiB = angka3; //alas
+                sisiC = angka2; //t
             }
-        } else if(angka2 > angka1 && angka2>angka3){
-            if(angka1 > angka3){
-                sisiA = angka2;
-                sisiB = angka1;
-                sisiC = angka3;
-            }
-        } else if(angka1 > angka2 && angka1>angka3){
-            if(angka2 > angka3){
-                sisiA = angka1;
-                sisiB = angka2;
-                sisiC = angka3;
+        } else {
+            if (angka2 > angka1 && angka2 > angka3) {
+                if (angka1 > angka3) {
+                    sisiA = angka2; //miring
+                    sisiB = angka1; //alas
+                    sisiC = angka3; //t
+                } else {
+                    sisiA = angka2; //miring
+                    sisiB = angka3; //alas
+                    sisiC = angka1; 
+                }
+            } else {
+                if (angka3 > angka1) {
+                    System.out.println(Integer.toString(c) + "," + a + "," + b);
+                } else {
+                    System.out.println(Integer.toString(c) + "," + b + "," + a);
+                }
             }
         }
+    
         
+       
         if(sisiA >= (sisiB + sisiC)){
             System.out.println("Bukan segitiga");
         } else if(sisiA * sisiA == (sisiB * sisiB + sisiC * sisiC)){
@@ -54,8 +69,7 @@ public class segitigadanhasil {
             System.out.println("Segitiga Tumpul");
         } else if(sisiA * sisiA < (sisiB * sisiB + sisiC * sisiC)){
             System.out.println("Segitiga Lancip");
-        }  
-        if(sisiA == sisiB && sisiA == sisiC && sisiB == sisiC){
+        } else if(sisiA == sisiB && sisiA == sisiC && sisiB == sisiC){
             System.out.println("Segitiga Sama Sisi");
         } else if(sisiA == sisiB && sisiA != sisiC && sisiB != sisiC){
             System.out.println("Segitiga Sama Kaki");
@@ -66,7 +80,14 @@ public class segitigadanhasil {
         int luasSegitiga = (sisiB * sisiC) / 2;
         System.out.println("Keliling : " + kelilingSegitiga);
         System.out.println("Luas : " + luasSegitiga);
-        
-    
     }
+    
 }
+}
+
+
+
+
+
+
+
