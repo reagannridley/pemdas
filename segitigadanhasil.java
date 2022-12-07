@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class tes {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
+        System.out.println(true);
         String kode1 = a.nextLine();
         String kode2 = a.nextLine();
         String kode3 = a.nextLine();
@@ -58,10 +59,18 @@ public class tes {
                     sisiB = angka1; //alas
                     sisiC = angka2;
                 }
-            } else if(angka1 == angka2 & angka3 == angka2){
+            } else if(angka1 == angka2 && angka3 == angka2){
                 sisiA = angka1; //miring
                 sisiB = angka2; //alas
                 sisiC = angka3;
+            } else if(angka1 == angka2 && angka2 > angka3){
+                sisiA = angka1; //miring
+                sisiB = angka2; //alas
+                sisiC = angka3;
+            } else if(angka2 == angka3 && angka3 > angka1){
+                sisiA = angka2; //miring
+                sisiB = angka3; //alas
+                sisiC = angka1;
             }
         }
 
