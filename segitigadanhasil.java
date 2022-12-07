@@ -23,56 +23,11 @@ public class tes {
         String y = kode2.substring(0, kode2Leng-2);
         String z = kode3.substring(0, kode3Leng-2);
 
-        int sisiA = 0;
-        int sisiB = 0;
-        int sisiC = 0;
-
-        if (angka1 > angka2 && angka1 > angka3) {
-            if (angka2 > angka3) {
-                sisiA = angka1; //miring
-                sisiB = angka2; //alas
-                sisiC = angka3; //t
-
-            } else {
-                sisiA = angka1; //miring
-                sisiB = angka3; //alas
-                sisiC = angka2; //t
-            }
-        } else {
-            if (angka2 > angka1 && angka2 > angka3) {
-                if (angka1 > angka3) {
-                    sisiA = angka2; //miring
-                    sisiB = angka1; //alas
-                    sisiC = angka3; //t
-                } else {
-                    sisiA = angka2; //miring
-                    sisiB = angka3; //alas
-                    sisiC = angka1;
-                }
-            } else if(angka3 > angka1 && angka3 > angka2){
-                if(angka2 > angka1){
-                    sisiA = angka3; //miring
-                    sisiB = angka2; //alas
-                    sisiC = angka1;
-                } else {
-                    sisiA = angka3; //miring
-                    sisiB = angka1; //alas
-                    sisiC = angka2;
-                }
-            } else if(angka1 == angka2 && angka3 == angka2){
-                sisiA = angka1; //miring
-                sisiB = angka2; //alas
-                sisiC = angka3;
-            } else if(angka1 == angka2 && angka2 > angka3){
-                sisiA = angka1; //miring
-                sisiB = angka2; //alas
-                sisiC = angka3;
-            } else if(angka2 == angka3 && angka3 > angka1){
-                sisiA = angka2; //miring
-                sisiB = angka3; //alas
-                sisiC = angka1;
-            }
-        }
+        int[] arrayAngka = {angka1,angka2,angka3};
+        Arrays.sort(arrayAngka);
+        int sisiA = arrayAngka[2];
+        int sisiB = arrayAngka[1];
+        int sisiC = arrayAngka[0];
 
 
         if(sisiA >= (sisiB + sisiC)){
